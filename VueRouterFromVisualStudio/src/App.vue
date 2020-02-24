@@ -6,7 +6,8 @@
         <!-- this doesnt reload the page -->
         <router-link to="/"> Home </router-link>
         <!-- you can send a parameter like /second/{id} -->
-        <router-link to="/second/12"> SecondRoute </router-link>
+        <router-link to="/second/12"> SecondRoute with 12 </router-link>
+        <router-link to="/second/10"> SecondRoute with 10 </router-link>
         <hr />
         <!-- we need to add a router-view  and it works!!-->
 
@@ -21,6 +22,12 @@
         name: 'app',
         components: {
             Home
+        },
+        //lifecycle hooks
+        data() {
+            return {
+
+            }
         }
     };
 </script>
