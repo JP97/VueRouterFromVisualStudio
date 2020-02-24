@@ -27,11 +27,29 @@
     }
 
     ul{
+        display: flex;
+        flex-direction:row;
+        align-items:center;
+        height:100%;
+        padding-left:5px;
         list-style-type:none;
     }
 
-    i{
-        width:25px;
-        height:25px;
+/*a because router-links convertes to an a*/
+    a{
+        display: flex;
+        text-decoration:none;
+        align-items:center;
+        flex-direction:row-reverse;
+    }
+
+    li{
+        padding: 10px 20px;
+    }
+
+    img{
+        margin-right:10px;
+        height:20px;
+        width:20px;
     }
 </style>
