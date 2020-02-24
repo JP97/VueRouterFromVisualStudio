@@ -9,8 +9,11 @@ import First from './components/TestFirstRoute.vue';
 Vue.use(VueRouter);
 
 //sets up two routes
+//you can declare a dynamic variable in rounds with writing :{variablename} with this you say the next part is a variable.
+// like /second/:id
+//you can extract the data from the variable
 const routes = [
-    { path: '/second', component: Second },
+    { path: '/second/:id', component: Second },
     { path: '/', component: First }
 ];
 
