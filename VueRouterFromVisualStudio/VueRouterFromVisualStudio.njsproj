@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="babel.config.js" />
+    <Content Include="src\components\ResponsiveMenu.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\components\SecondComponent.vue">
       <SubType>Code</SubType>
     </Content>

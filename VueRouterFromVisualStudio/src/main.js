@@ -13,7 +13,7 @@ Vue.use(VueRouter);
 // like /second/:id
 //you can extract the data from the variable
 const routes = [
-    { path: '/second/:id', component: Second },
+    { path: '/second', component: Second },
     { path: '/', component: First }
 ];
 
