@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li v-bind:key="index" v-for="(link, index) in navLinks">
-                <!-- this v-bind is nessecary for this to work shortcut is just :-->
+                <!-- this v-bind is nessecary for this to work shortcut is just ":" instead if "v-bind:"-->
                 <router-link v-bind:to="link.path"  v-bind:style="{color: '#DDD'}">
                     {{link.text}}
                     <img v-bind:src="link.icon"/>
