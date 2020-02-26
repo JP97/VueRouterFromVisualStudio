@@ -1,15 +1,12 @@
 <template>
-    <nav>
-        <ul>
-            <li v-bind:key="index" v-for="(link, index) in navLinks">
-                <!-- this v-bind is nessecary for this to work shortcut is just ":" instead if "v-bind:"-->
-                <router-link v-bind:to="link.path"  v-bind:style="{color: '#DDD'}">
-                    {{link.text}}
-                    <img v-bind:src="link.icon"/>
-                </router-link>
-            </li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <div v-bind:key="index" v-for="(link, index) in navLinks" >
+            <router-link v-bind:to="link.path" v-bind:color="{color: color || '#222'}">
+                <img v-bind:src="link.icon" />
+                {{link.text}}
+            </router-link>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -20,36 +17,27 @@
 
 <style scoped>
 
-    nav{
-        height: 60px;
-        width:100%;
-        background-color:#333;
-    }
-
-    ul{
-        display: flex;
-        flex-direction:row;
-        align-items:center;
+    .navbar{
         height:100%;
-        padding-left:5px;
-        list-style-type:none;
+        width:25%;
+        background-color:#333;
+        overflow:auto;
     }
 
-/*a because router-links convertes to an a*/
-    a{
-        display: flex;
+    .navbar a{
+
         text-decoration:none;
-        align-items:center;
-        flex-direction:row-reverse;
+        font-size:20px;
+        color:aliceblue;
+        float:left;
+        padding:12px;
+        text-align:center;
     }
 
-    li{
-        padding: 10px 20px;
-    }
 
     img{
-        margin-right:10px;
         height:20px;
         width:20px;
+        margin-right:10px;
     }
 </style>
